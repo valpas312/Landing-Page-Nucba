@@ -1,110 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    background: rgb(244, 211, 94);
+:root {
+  --body-bg: #3772ff;
+  --log-bg: #fdca40;
+  --btn-color: #080708;
+  --nav-bg: #df2935;
 }
-
 /* Navbar */
-.nav-bar{
-    display: flex;
-    background: rgb(13, 59, 102);
-    justify-content: space-around;
-    align-items: center;
+.nav-bar {
+  display: flex;
+  background: var(--nav-bg);
+  justify-content: space-around;
+  align-items: center;
 }
-.nav-list{
-    display: flex;
-    gap: 20px;
-    list-style: none;
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
 /* Main */
-:root{
-    --dark-bg: rgb(249, 87, 56);
-    --red-bg: #efa00b;
-    --btn-color: #d65108;
-}
-body{
-    background-color: var(--dark-bg);
-    color: white;
+body {
+  background-color: var(--body-bg);
+  color: white;
 }
 /* Container general */
-.container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Sections */
+.sections {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 1000px;
+  margin: 50px;
+}
+.section-svg {
+  max-width: 400px;
+}
+section {
+  margin: 20px;
+}
+.info-prin {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  align-items: center;
+}
+.btn-prin {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  margin: 30px;
 }
 /* Container login */
-.login{
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.login {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    max-width: 400px;
-    gap: 15px;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 400px;
+  gap: 15px;
 }
-form input{
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
+form input {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
 }
-input:focus{
-    outline: none;
+input:focus {
+  outline: none;
 }
-form input:last-child{
-    margin-top: 10px;
-    background-color: var(--btn-color);
-    color: white;
+.btn {
+  margin-top: 10px;
+  background-color: var(--btn-color);
+  color: white;
 }
-form input:last-child:hover{
-    background-color: #591f0a;
+.btn:hover {
+  background-color: rgb(33, 31, 30);
 }
 /* Imagen login */
-.img-login{
-    display: none;
+.img-login {
+  display: none;
+}
+/* Footer */
+.footer {
+  text-align: center;
+  margin: 50px;
 }
 /* Media queries */
-@media screen and (min-width:1000px) {
-    .login{
-        background: var(--red-bg);
-        border-radius: 20px;
-        padding: 20px 0px 20px 20px;
-        max-width: 700px;
-        width: 100%;
-        min-height: 200px;
-        max-height: 300px;
-        height: 60%;
-        box-shadow: 0 0 26px black;
-    }
-    .img-login{
-        display: block;
-        height: 100%;
-        width: 100%;
-        background: url("https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_850,h_850/https://www.cintademoebius.com/wp-content/uploads/2021/02/letra-v-tangram.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+@media screen and (min-width: 1000px) {
+  .login {
+    background: var(--log-bg);
+    border-radius: 20px;
+    padding: 20px 0px 20px 20px;
+    max-width: 700px;
+    width: 100%;
+    min-height: 300px;
+    max-height: 1000px;
+    height: 60%;
+    box-shadow: 0 0 26px black;
+  }
+  .img-login {
+    display: block;
+    width: 576px;
+    background: url("https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_850,h_850/https://www.cintademoebius.com/wp-content/uploads/2021/02/letra-v-tangram.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 /* Extras sin clase */
-a{
-    text-decoration: none;
-    color: rgb(250, 240, 202);
+a {
+  text-decoration: none;
+  color: rgb(250, 240, 202);
 }
-a:hover{
-    color: rgb(238, 150, 75);
+a:hover {
+  color: rgb(33, 31, 30);
 }
-img{
-    width: 50px;
+img {
+  width: 50px;
 }
